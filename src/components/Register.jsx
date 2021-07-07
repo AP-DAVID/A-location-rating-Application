@@ -23,6 +23,7 @@ export default function Register({setShowRegister}) {
 
         try{
           const res = await axios.post("/api/users/register", newUser);
+          console.log(res);
           setError(false)
           setSuccess(true);
         }catch(err){
