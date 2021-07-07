@@ -20,7 +20,7 @@ export default function Login({setShowLogin, myStorage, setCurrentUser }) {
 
 
         try{
-          const res = await axios.post("/api/users/login", user);
+          const res = await axios.post("https://davidmapbox.herokuapp.com/api/users/login", user);
           myStorage.setItem("user", res.data.username)
           setCurrentUser(res.data.username)
           setShowLogin(false)

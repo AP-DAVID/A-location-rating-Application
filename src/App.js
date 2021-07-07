@@ -29,7 +29,7 @@ function App() {
   useEffect(() =>{
     const getPins = async() =>{
       try{
-        const res = await axios.get("/api/pins");
+        const res = await axios.get("https://davidmapbox.herokuapp.com/api/pins");
         setPins(res.data)
         console.log(res.data)
       }catch(err){
